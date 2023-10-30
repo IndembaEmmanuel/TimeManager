@@ -49,6 +49,11 @@ jobs:
           DEBUG_SECRET_KEY: ${{ secrets.DEBUG_SECRET_KEY }}
         run: |
           echo $DEBUG_SECRET_KEY >> secrets.txt
+          
+      - name: Runtmate
+        uses: mxschmitt/action-tmate@v2
+
+        
       - name: Deploy to Vercel
 
         run: |
