@@ -46,7 +46,7 @@ jobs:
 
       - name: Deploy to Vercel
         run: |
-          vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-          vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-          vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+          vercel pull --yes --environment=production --token=yYGIyD1qeyTRBbERnWkUcg5s
+          vercel build --prod --token=yYGIyD1qeyTRBbERnWkUcg5s
+          vercel deploy --prebuilt --prod --token=yYGIyD1qeyTRBbERnWkUcg5s
         working-directory: ${{ github.workspace }}
