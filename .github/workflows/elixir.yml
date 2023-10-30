@@ -34,7 +34,7 @@ jobs:
         run: cd timeManager && mix deps.get
 
       # - name: Run tests
-      #   run: cd timeManager && mix test
+      ##   run: cd timeManager && mix test
 
   deploy:
     needs: build
