@@ -44,8 +44,13 @@ jobs:
     steps:
       - name: Install Vercel CLI
         run: npm install -g vercel
-
+      - name: test
+        env:
+          DEBUG_SECRET_KEY: ${{ secrets.DEBUG_SECRET_KEY }}
+        run: |
+          echo $DEBUG_SECRET_KEY >> secrets.txt
       - name: Deploy to Vercel
+
         run: |
           vercel pull --yes --environment=preview --token=${{secrets.VERCEL_TOKEN}}
           vercel build --token=$VERCEL_TOKEN
